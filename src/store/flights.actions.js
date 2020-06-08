@@ -1,9 +1,11 @@
 import { fetchFlightsList  } from './fetchFlights';
 
+//1- create action variabel
 export const FLIGHTS_DEPARTURES = 'FLIGHTS_DEPARTURES';
 export const SHOW_SPINNER='SHOW_SPINNER';
-export const ACTIVE_BUTTON='ACTIVE_BUTTON'
+export const ACTIVE_BUTTON='ACTIVE_BUTTON';
 
+//create actionsListRecived
 export const  flightsListRecieved=(flightsData)=>{
   return {
 
@@ -15,22 +17,27 @@ export const  flightsListRecieved=(flightsData)=>{
    
 }
 
-
+//action for spinner
 export const showSpinner=()=>{
     return {
         type: SHOW_SPINNER
     }
 }
 
+//action active button
 export const activeButton=(stateBtn)=>{
   return {
       type: ACTIVE_BUTTON,
  payload: {stateBtn}
  
 }
+
 }
-export const getFlightsList = (type)=>(dispatch,getState)=>{
-   if(type==='arrival') {
+//  get list 
+
+const ARRIVAL = ' ARRIVAL';
+export const getFlightsList = (type)=>(dispatch)=>{
+   if(type === ARRIVAL) {
        dispatch(activeButton(true))
    } else{
        dispatch(activeButton(false))

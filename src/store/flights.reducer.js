@@ -1,3 +1,6 @@
+//1-import all actions
+//2- create initialSatet
+//3-create actionRaeducer..(flightsReducer)
 import {FLIGHTS_DEPARTURES, SHOW_SPINNER, ACTIVE_BUTTON } from './flights.actions'
 const initialState={
   flightsData:[],
@@ -5,7 +8,7 @@ const initialState={
   isLoading: false,
 };
 
-const flightsReducer=(state=initialState,action)=>{
+export const flightsReducer=(state=initialState,action)=>{
   switch(action.type){
        case FLIGHTS_DEPARTURES:
          return {
@@ -27,6 +30,3 @@ const flightsReducer=(state=initialState,action)=>{
           return state;
   }
 }
-
-
-export default flightsReducer;

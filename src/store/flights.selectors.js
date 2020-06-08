@@ -1,11 +1,11 @@
 export const flightsListSelector = state =>{
-    return state.flightsData.flightsData
+    return state.flights.flightsData
 }
 
 export const spinnerSelectore = state=>{
-    return state.flightsData.isLoading
+    return state.flights.isLoading
 }
 
 export const activeButtonSelector =state=>{
-    return state.flightsData.isActiveButton
+    return state.flights.isActiveButton
 }
