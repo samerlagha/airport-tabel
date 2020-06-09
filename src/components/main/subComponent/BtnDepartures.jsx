@@ -7,7 +7,7 @@ const Departures =()=>{
         <Link to="/departure">
         <button className=' btn departures-btn not-active'>
           <i className="fas fa-plane-departure"></i>
-         <span> Departures</span>
+         <span> ВИЛІТ усі РЕЙСИ</span>
         </button>
       </Link>
     )
