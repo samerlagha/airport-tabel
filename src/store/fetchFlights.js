@@ -1,4 +1,4 @@
-// import moment from 'moment';
+ import moment from 'moment';
 
 // const date = moment().format('DD-MM-YYYY')
 
@@ -11,16 +11,6 @@ export const fetchFlightsList = async () => {
     };
     throw new Error('failed connected to server!!!');
 };
-// const baseUrl = 'https://api.iev.aero/api/flights';
 
-// export const fetchdataFlights= (date)=>{
-//     return fetch(`${baseUrl}/${date}`)
-//       .then(response=>{
-//           if(response.ok){
-//               return response.json();
-//           };
-//           throw new Error('failed connected to server!!!')
-//       })
-// }
 
 

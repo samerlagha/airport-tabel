@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import ErrorIndicator from "./ErrorIndicator";
+// import React, { useState } from 'react';
+// import ErrorIndicator from "./ErrorIndicator";
 
-const  ErrorBoundryH = () =>{
+// const  ErrorBoundryH = () =>{
 
 
-  const [hasError, setError] = useState(false);
+//   const [hasError, setError] = useState(false);
    
-  if(!hasError){
-    return null;
-  }
+//   if(!hasError){
+//     return null;
+//   }
 
-  return(
-      <ErrorIndicator/>
-  )
-  }
+//   return(
+//       <ErrorIndicator/>
+//   )
+//   }
 
-export default ErrorBoundryH;
+// export default ErrorBoundryH;

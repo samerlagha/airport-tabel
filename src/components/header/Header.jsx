@@ -7,6 +7,7 @@ import './header.scss';
 const Header =()=>{
 
     const [searchValue, setValue] =useState('');
+
     return(
         <header className='header'>
        <h2 className="title">ПОШУК РЕЙСУ</h2>
@@ -15,12 +16,12 @@ const Header =()=>{
                <i className='fa fa-search fa-2x' aria-hidden='true'></i>
                </div>
                <input
-                   name='saerch'
+                   name='search'
                    className='search-value'
                    type ='text'
                    value={searchValue}
                    onChange={()=>setValue(event.target.value)}
-                   placeholder='Номер рейсу або місто' />
+                   placeholder='Номер рейсу....' />
                    <Link
                    
                    to={`/departure?search=${searchValue}`}
@@ -29,7 +30,6 @@ const Header =()=>{
                        <button className ='search-btn' type='submit'>
                        Знайти
                        </button>
-
 
                    </Link>
        </form>
