@@ -1,11 +1,11 @@
-.error-indicator{
+.error-indicator {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    columns: #fd0505;
-}
+    color: #fa0e06;
 
-.text-size{
-    font-size: 2rem;
+    span {
+        font-size: 1.7rem;
+    }
 }

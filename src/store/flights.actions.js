@@ -1,49 +1,48 @@
-import { fetchFlightsList  } from './fetchFlights';
+import { fetchFlightsList } from './fetchFlights'
 
-//1- create action variabel
+
 export const FLIGHTS_DEPARTURES = 'FLIGHTS_DEPARTURES';
-export const SHOW_SPINNER='SHOW_SPINNER';
-export const ACTIVE_BUTTON='ACTIVE_BUTTON';
+export const SHOW_SPINNER = 'SHOW_SPINNER';
+export const TOGGLE_ACTIVE_BUTTON = 'TOGGLE_ACTIVE_BUTTON'
 
-//create actionsListRecived
-export const  flightsListRecieved=(flightsData)=>{
-  return {
 
-    type: FLIGHTS_DEPARTURES ,
-    payload :{
-        flightsData,
+export const flightsListRecieved = flights => {
+    return {
+        type: FLIGHTS_DEPARTURES,
+        payload: {
+            flights
+        }
     }
-  }
-   
-}
+};
 
-//action for spinner
-export const showSpinner=()=>{
+export const showSpinner = () => {
     return {
         type: SHOW_SPINNER
     }
+};
+
+export const toggleActiveButton = (boolean) => {
+    return {
+        type: TOGGLE_ACTIVE_BUTTON,
+        payload: {
+            boolean
+        }
+    }
 }
 
-//action active button
-export const activeButton=(stateBtn)=>{
-  return {
-      type: ACTIVE_BUTTON,
- payload: {stateBtn}
- 
-}
 
-}
-//  get list 
+export const getFlightsList = type => (dispath) => {
+    if (type === 'arrival') {
+        dispath(toggleActiveButton(true))
+    } else {
+        dispath(toggleActiveButton(false))
+    }
+    dispath(showSpinner());
+    fetchFlightsList()
+        .then(item =>
+             dispath(flightsListRecieved(item.body[type])))
+} 
 
-const ARRIVAL = ' ARRIVAL';
-export const getFlightsList = (type)=>(dispatch)=>{
-   if(type === ARRIVAL) {
-       dispatch(activeButton(true))
-   } else{
-       dispatch(activeButton(false))
-   }
-   dispatch(showSpinner());
-   fetchFlightsList()
-       .then(item=>dispatch(flightsListRecieved(item.body[type])))
-   
-}
+
+
+

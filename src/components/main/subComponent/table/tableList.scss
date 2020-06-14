@@ -6,7 +6,13 @@
     th {
         padding-top: 50px;
         height: 100px;
-        color:skyblue;
+        color: skyblue;
+    }
+
+    h2{
+        padding-top: 50px;
+        height: 100px;
+        color: skyblue;  
     }
 
     .details-body:hover {
@@ -27,8 +33,8 @@
                 text-align: center;
             }
 
-             &:nth-child(even) {
-              background-color: rgba(0, 102, 135, 0.1);
+            &:nth-child(even) {
+                background-color: rgba(0, 102, 135, 0.1);
             }
         }
     }

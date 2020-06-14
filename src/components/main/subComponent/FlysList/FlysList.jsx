@@ -1,18 +1,19 @@
-import React from 'react';
-import moment from 'moment';
-import './flyList.scss'
+import React from "react";
+import "./fly-list.scss";
+import moment from "moment";
 
-const FlysList =(props) =>{
+const ItemsList = (props) => {
   return props.data.map(item => {
     const terminal = item.terminal === "A" ? "terminal" : "terminal d";
-    const statusFilght = item.status === "LN" ? "Landed " : "Departed at ";
+    const statusFilght = item.status === "LN" ? "Landed " : "Departed  ";
     const logo = item.airline.ru.logoSmallName;
     const name = item.airline.ru.name;
     const flight = item.codeShareData[0].codeShare;
     const timeFact = moment(item.timeTakefFact).format("HH:mm");
     const localTime = moment(item.timeToStand).format("HH:mm");
     const teminalNumber = item.term;
-    const destination = item["airportToID.name_en"] || item["airportFromID.name_en"];
+    const destination =
+      item["airportToID.name_en"] || item["airportFromID.name_en"];
 
     return (
       <tr key={item.ID} className="details-body">
@@ -36,4 +37,4 @@ const FlysList =(props) =>{
   });
 };
 
-export default FlysList;
+export default ItemsList;

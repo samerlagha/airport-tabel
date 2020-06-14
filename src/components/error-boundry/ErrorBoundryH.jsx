@@ -5,16 +5,13 @@ const  ErrorBoundryH = () =>{
 
 
   const [hasError, setError] = useState(false);
-function error(){
-   setError(hasError =>{
-    hasError = !hasError.setError;
-   })
-
- }
- 
+   
+  if(!hasError){
+    return null;
+  }
 
   return(
-      {error}
+      <ErrorIndicator/>
   )
   }
 
