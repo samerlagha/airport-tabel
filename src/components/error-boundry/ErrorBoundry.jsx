@@ -1,6 +1,11 @@
-import React from "react";
+import React ,{useState} from "react";
 import ErrorIndicator from "./ErrorIndicator";
 
+// const ErrorBoundry =()=>{
+//   const [currentState,setCurrentstate] = useState(false)
+//   if(currentState===false) return <ErrorIndicator />
+//   return props.children
+// }
 class ErrorBoundry extends React.Component {
   state = {
     hasError: false
