@@ -22,7 +22,7 @@ const Arrivals = ({ isLoading, flightsList }) => {
     <Link to={isQueryParam}>
       <button className={`arrivals-btn ${isActive} btn`}>
         <i className="fas fa-plane-arrival"></i>
-        <span> ПРИЛІТ усі РЕЙСИ</span>
+        <span> ПРИЛІТ</span>
       </button>
     </Link>
   );

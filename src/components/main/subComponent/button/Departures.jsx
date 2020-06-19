@@ -17,7 +17,7 @@ const Departures = ({ isLoading, flightsList }) => {
      <Link to="/departure"> 
       <button className={`departures-btn ${isActive} btn`}>
         <i className="fas fa-plane-departure"></i>
-         <span>ВИЛІТ усі РЕЙСИ</span>
+         <span>ВИЛІТ</span>
       </button>
     </Link>
   );

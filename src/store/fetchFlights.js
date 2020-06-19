@@ -1,4 +1,4 @@
-//import moment from "moment";
+import moment from "moment";
 
 // const url = "https://api.iev.aero/api/flights";
 
@@ -16,8 +16,8 @@
 
 //const date = moment().format('DD-MM-YYYY')
 
-//const date= moment(new Date()).format("DD-MM-YYYY");
-const date ='10-02-2020';
+const date= moment(new Date()).format("DD-MM-YYYY");
+//const date ='10-02-2020';
 
 const baseUrl = `https://api.iev.aero/api/flights/${date}`;
 

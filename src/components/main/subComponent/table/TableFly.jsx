@@ -3,9 +3,9 @@ import { useLocation, useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { flightsListSelector, spinnerSelector } from "../../../../store/flights.selectors";
 import Spinner from "../../../spinner/Spinner";
-import ItemsList from "../FlysList/FlysList";
+import FlysList from "../FlysList/FlysList";
 import * as flightsActions from "../../../../store/flights.actions";
-import "./tableList.scss";
+import "./tableFly.scss";
 import qs from "qs";
 
 const TableList = ({ getFlightsList, flights, isLoading }) => {
@@ -33,7 +33,7 @@ const TableList = ({ getFlightsList, flights, isLoading }) => {
         </th>
       </tr>
     ) : (
-      <ItemsList data={allFlights} />
+      <FlysList data={allFlights} />
     );
 
   return (
