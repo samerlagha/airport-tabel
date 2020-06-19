@@ -3,6 +3,7 @@ import "./flyList.scss";
 import moment from "moment";
 
    const FlaysList = ({ data }) => {
+     console.log('data:',data)
   return data.map(item => {
     const terminal = item.term === "A" ? "terminal" : "terminal d";
     const statusFilght = item.status === "LN" ? "Прибув " : "Вилетів о ";
